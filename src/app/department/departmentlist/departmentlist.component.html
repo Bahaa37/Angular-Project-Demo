@@ -1,0 +1,36 @@
+<div class="table-responsive my-5">
+  <table class="table
+  table-hover
+  table-bordered
+  text-center
+  align-middle">
+  <thead class="table-light">
+    <caption>Students List</caption>
+    <a [routerLink]="['add']" class="btn btn-info w-100 my-2">Add</a>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Capacity</th>
+        <th>Operation</th>
+
+      </tr>
+      </thead>
+      <tbody class="table-group-divider">
+        <tr class="table-primary" *ngFor="let item of departments" >
+          <td>{{item.id}}</td>
+          <td>{{item.name}}</td>
+          <td>{{item.capacity}}</td>
+          <td>
+            <button (click)="delete(item.id)" class="btn btn-danger">Delete</button>
+            <a [routerLink]="['/department','details',item.id]" class="btn btn-primary mx-2">Details</a>
+          </td>
+
+        </tr>
+      </tbody>
+    </table>
+    <router-outlet ></router-outlet>
+  </div>
+
+<!--
+  <app-departmentdetails [id]="deptiddetails"></app-departmentdetails>
+  <app-departmentadd></app-departmentadd> -->

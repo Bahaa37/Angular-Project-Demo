@@ -1,0 +1,19 @@
+
+<div class="container-fluid bg-dark row my-2 ">
+  <div class="col-6 ">
+    <label class="form-label text-white">Id</label>
+    <input type="text"class="w-75 form-control bg-dark text-white"  [(ngModel)]="newStudent.id" >
+    <label class="form-label text-white">Name</label>
+    <input type="text"class="w-75 form-control bg-dark text-white"  [(ngModel)]="newStudent.name" >
+  </div>
+  <div class="col-6">
+    <label class="form-label text-white">Age</label>
+    <input type="text"class="w-75 form-control bg-dark text-white"  [(ngModel)]="newStudent.age" >
+    <label class="form-label text-white">Degree</label>
+    <input type="text"class="w-75 form-control bg-dark text-white"  [(ngModel)]="newStudent.degree" >
+  </div>
+  <div class="my-5">
+    <button (click)="save()"   class="px-5 btn btn-outline-primary">Add</button>
+  </div>
+</div>
+
